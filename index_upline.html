@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money-Making Masterclass | Discover New Ways to Build Your Income</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-dark: #0a192f;
+      --primary-blue: #1d4ed8;
+      --primary-light: #2563eb;
+      --accent-blue: #3b82f6;
+      --soft-blue-bg: #eff6ff;
+      --card-border: #dbeafe;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --white: #ffffff;
+      --error-bg: #fef2f2;
+      --error-text: #dc2626;
+      --error-border: #fecaca;
+      --success-bg: #f0fdf4;
+      --success-text: #15803d;
+      --success-border: #bbf7d0;
+      --shadow-sm: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 10px 25px -5px rgba(29, 78, 216, 0.08), 0 8px 10px -6px rgba(29, 78, 216, 0.04);
+      --shadow-lg: 0 20px 30px -10px rgba(15, 23, 42, 0.15);
+      --radius-md: 12px;
+      --radius-lg: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-main);
+      background-color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 1.5rem;
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--primary-blue);
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      background-color: var(--accent-blue);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .nav-cta {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background-color: #1e40af;
+      transform: translateY(-1px);
+    }
+
+    /* Container & Section Base */
+    .section {
+      padding: 5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary-blue);
+      background: var(--soft-blue-bg);
+      border: 1px solid var(--card-border);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    /* SECTION 1: Hero Section */
+    .hero {
+      background: radial-gradient(circle at top right, #1e3a8a 0%, #0f172a 70%);
+      color: var(--white);
+      padding: 5.5rem 1.5rem 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-subheading {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.18);
+      border: 1px solid rgba(147, 197, 253, 0.35);
+      color: #93c5fd;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.45rem 1.15rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.25rem;
+      color: var(--white);
+    }
+
+    .hero-description {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: #cbd5e1;
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      font-weight: 400;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      max-width: 860px;
+      margin: 0 auto 2.75rem;
+      text-align: left;
+    }
+
+    .hero-point-item {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.95rem 1.15rem;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #f1f5f9;
+      backdrop-filter: blur(4px);
+    }
+
+    .check-icon {
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      border-radius: 50%;
+      background: #2563eb;
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      padding: 1.1rem 2.4rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.55);
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.7);
+      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    }
+
+    .hero-btn-note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    /* SECTION 2: What Will You Learn? */
+    .learn-section {
+      background-color: var(--white);
+    }
+
+    .learn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .learn-card {
+      background: var(--white);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .learn-card:hover {
+      transform: translateY(-5px);
+      border-color: #93c5fd;
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--soft-blue-bg);
+      color: var(--primary-blue);
+      font-weight: 800;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--card-border);
+    }
+
+    .learn-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+      color: var(--text-main);
+    }
+
+    .learn-card p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+
+    /* SECTION 3: Who Can Join? */
+    .who-section {
+      background-color: var(--soft-blue-bg);
+      border-top: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .who-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.65rem 1.5rem;
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .who-icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 10px;
+      background: var(--primary-blue);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 0.1rem;
+    }
+
+    .who-card p {
+      font-weight: 600;
+      color: var(--text-main);
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+
+    .who-banner {
+      background: var(--white);
+      border: 1px solid #bfdbfe;
+      border-left: 5px solid var(--primary-blue);
+      border-radius: var(--radius-md);
+      padding: 1.15rem 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 600;
+      color: var(--primary-blue);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* SECTION 4: Masterclass Details */
+    .details-section {
+      background-color: var(--white);
+    }
+
+    .details-box {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2rem;
+      color: var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .detail-item {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      padding: 1.75rem 1.25rem;
+    }
+
+    .detail-label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #93c5fd;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+      display: block;
+    }
+
+    .detail-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    /* SECTION 5: Custom Registration Form */
+    .form-section {
+      background: #f1f5f9;
+    }
+
+    .form-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      box-shadow: var(--shadow-md);
+      padding: 2.75rem 2.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.6rem;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.96rem;
+      margin-bottom: 0.55rem;
+      color: var(--text-main);
+    }
+
+    .required-star {
+      color: #dc2626;
+      margin-left: 2px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-size: 0.98rem;
+      font-family: inherit;
+      color: var(--text-main);
+      background-color: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      background-color: var(--white);
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+    }
+
+    .radio-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .radio-card {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.8rem 1rem;
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .radio-card:hover {
+      border-color: #93c5fd;
+      background: var(--soft-blue-bg);
+    }
+
+    .radio-card input[type="radio"] {
+      accent-color: var(--primary-blue);
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    /* Payment QR Card */
+    .qr-section-card {
+      background: var(--soft-blue-bg);
+      border: 2px dashed #93c5fd;
+      border-radius: var(--radius-md);
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+    }
+
+    .qr-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    .qr-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .qr-image-frame {
+      max-width: 280px;
+      margin: 0 auto 1rem;
+      background: var(--white);
+      padding: 0.75rem;
+      border-radius: var(--radius-md);
+      border: 1px solid #dbeafe;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .qr-image-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .qr-placeholder-fallback {
+      display: none;
+      padding: 2rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      background: #f8fafc;
+      border-radius: 8px;
+    }
+
+    .upi-badge {
+      display: inline-block;
+      background: var(--white);
+      border: 1px solid #bfdbfe;
+      padding: 0.45rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-top: 0.25rem;
+    }
+
+    .verification-note {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-top: 0.45rem;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1.05rem;
+      font-size: 1.05rem;
+      margin-top: 0.5rem;
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Status Alert Box */
+    .status-message {
+      display: none;
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .status-message.error {
+      display: block;
+      background-color: var(--error-bg);
+      color: var(--error-text);
+      border: 1px solid var(--error-border);
+    }
+
+    .status-message.success {
+      display: block;
+      background-color: var(--success-bg);
+      color: var(--success-text);
+      border: 1px solid var(--success-border);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-dark);
+      color: #94a3b8;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      font-size: 0.88rem;
+    }
+
+    .footer p {
+      max-width: 720px;
+      margin: 0.4rem auto;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 640px) {
+      .section {
+        padding: 3.5rem 1.15rem;
+      }
+      .hero {
+        padding: 4rem 1.15rem 4.5rem;
+      }
+      .form-wrapper {
+        padding: 1.75rem 1.25rem;
+      }
+      .radio-group {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="brand-dot"></span>
+        Money-Making Masterclass
+      </a>
+      <a href="#registration-form" class="nav-cta">Register Now</a>
+    </div>
+  </header>
+
+  <!-- SECTION 1: Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <span class="hero-subheading">Join Our Exclusive Money-Making Masterclass</span>
+      <h1 class="hero-title">Discover New Ways to Build Your Income</h1>
+      <p class="hero-description">
+        Learn about different income opportunities, essential digital skills, and practical ways to get started in today's digital world.
+      </p>
+
+      <div class="hero-points">
+        <div class="hero-point-item">
+          <span class="check-icon">&#10003;</span>
+          <span>Beginner-Friendly Session</span>
+        </div>
+        <div class="hero-point-item">
+          <span class="check-icon">&#10003;</span>
+          <span>Learn About Digital Income Opportunities</span>
+        </div>
+        <div class="hero-point-item">
+          <span class="check-icon">&#10003;</span>
+          <span>Understand the Basics of Getting Started</span>
+        </div>
+        <div class="hero-point-item">
+          <span class="check-icon">&#10003;</span>
+          <span>One-Day Online Masterclass</span>
+        </div>
+      </div>
+
+      <a href="#registration-form" class="btn-primary">REGISTER FOR THE MASTERCLASS</a>
+      <p class="hero-btn-note">Fill out the form to express your interest and receive further details.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: What Will You Learn? -->
+  <section class="section learn-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Curriculum Overview</span>
+        <h2 class="section-title">What Will You Explore in This Masterclass?</h2>
+      </div>
+
+      <div class="learn-grid">
+        <div class="learn-card">
+          <div class="card-number">1</div>
+          <h3>Understanding Digital Income</h3>
+          <p>Explore different ways people build income streams using digital platforms.</p>
+        </div>
+
+        <div class="learn-card">
+          <div class="card-number">2</div>
+          <h3>Essential Digital Skills</h3>
+          <p>Understand the basic skills needed to explore online opportunities.</p>
+        </div>
+
+        <div class="learn-card">
+          <div class="card-number">3</div>
+          <h3>Getting Started</h3>
+          <p>Learn the fundamental steps involved in starting your journey.</p>
+        </div>
+
+        <div class="learn-card">
+          <div class="card-number">4</div>
+          <h3>Your Next Steps</h3>
+          <p>Understand how to evaluate opportunities and decide what works for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Who Can Join? -->
+  <section class="section who-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Audience</span>
+        <h2 class="section-title">Who Is This Masterclass For?</h2>
+      </div>
+
+      <div class="who-grid">
+        <div class="who-card">
+          <div class="who-icon">1</div>
+          <p>Students exploring digital opportunities.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">2</div>
+          <p>Beginners interested in learning new skills.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">3</div>
+          <p>Working professionals exploring additional income options.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">4</div>
+          <p>Individuals interested in understanding online business opportunities.</p>
+        </div>
+      </div>
+
+      <div class="who-banner">
+        No advanced technical knowledge is required.
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Masterclass Details -->
+  <section class="section details-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Session Information</span>
+        <h2 class="section-title">Masterclass Details</h2>
+      </div>
+
+      <div class="details-box">
+        <div class="details-grid">
+          <div class="detail-item">
+            <span class="detail-label">Masterclass</span>
+            <span class="detail-value">Money-Making Masterclass</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Duration</span>
+            <span class="detail-value">1 Day</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Format</span>
+            <span class="detail-value">Online Masterclass</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Custom Registration Form -->
+  <section id="registration-form" class="section form-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Enrollment</span>
+        <h2 class="section-title">Register for the Masterclass</h2>
+      </div>
+
+      <div class="form-wrapper">
+        <form id="masterclassForm" novalidate>
+          
+          <!-- 1. Full Name -->
+          <div class="form-group">
+            <label class="form-label" for="fullName">
+              1. Full Name <span class="required-star">*</span>
+            </label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              class="form-control"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+        <!-- 2. Mobile Number -->
+<div class="form-group">
+  <label class="form-label" for="mobileNumber">
+    2. Mobile Number <span class="required-star">*</span>
+  </label>
+  <input
+    type="tel"
+    id="mobileNumber"
+    name="mobileNumber"
+    class="form-control"
+    placeholder="Enter your 10-digit mobile number"
+    pattern="[0-9+\-\s]{10,15}"
+    required
+  />
+</div>
+
+          <!-- 3. Age -->
+          <div class="form-group">
+            <label class="form-label" for="age">
+              3. Age <span class="required-star">*</span>
+            </label>
+            <input
+              type="text"
+              id="age"
+              name="age"
+              class="form-control"
+              placeholder="Enter your age (e.g., 21)"
+              inputmode="numeric"
+              required
+            />
+          </div>
+
+          <!-- 4. State and City -->
+          <div class="form-group">
+            <label class="form-label" for="stateAndCity">
+              4. State and City <span class="required-star">*</span>
+            </label>
+            <input
+              type="text"
+              id="stateAndCity"
+              name="stateAndCity"
+              class="form-control"
+              placeholder="e.g., Rajasthan, Jaipur"
+              required
+            />
+          </div>
+
+          <!-- 5. Current Profession -->
+          <div class="form-group">
+            <label class="form-label">
+              5. Current Profession <span class="required-star">*</span>
+            </label>
+            <div class="radio-group">
+              <label class="radio-card">
+                <input type="radio" name="currentProfession" value="Student" required />
+                <span>Student</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="currentProfession" value="Job" required />
+                <span>Job</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="currentProfession" value="Business" required />
+                <span>Business</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="currentProfession" value="Other" required />
+                <span>Other</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 6. Why do you want to start online earning? -->
+          <div class="form-group">
+            <label class="form-label">
+              6. Why do you want to start online earning? <span class="required-star">*</span>
+            </label>
+            <div class="radio-group">
+              <label class="radio-card">
+                <input type="radio" name="earningReason" value="Extra Source of Income" required />
+                <span>Extra Source of Income</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="earningReason" value="Student Side Income" required />
+                <span>Student Side Income</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="earningReason" value="Financial Independence" required />
+                <span>Financial Independence</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="earningReason" value="Learn New Skills" required />
+                <span>Learn New Skills</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 7. Gender -->
+          <div class="form-group">
+            <label class="form-label">
+              7. Gender <span class="required-star">*</span>
+            </label>
+            <div class="radio-group">
+              <label class="radio-card">
+                <input type="radio" name="gender" value="Male" required />
+                <span>Male</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="gender" value="Female" required />
+                <span>Female</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="gender" value="Prefer Not to Say" required />
+                <span>Prefer Not to Say</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 8. Payment Amount -->
+          <div class="form-group">
+            <label class="form-label" for="paymentAmount">
+              8. Payment Amount (in ₹) <span class="required-star">*</span>
+            </label>
+            <input
+              type="text"
+              id="paymentAmount"
+              name="paymentAmount"
+              class="form-control"
+              placeholder="Enter the amount paid in Rupees (e.g., 199)"
+              inputmode="numeric"
+              required
+            />
+          </div>
+
+          <!-- 9. Payment QR Code -->
+          <div class="form-group">
+            <label class="form-label">
+              9. Payment QR Code <span class="required-star">*</span>
+            </label>
+            <div class="qr-section-card">
+              <div class="qr-title">Scan &amp; Pay via Any UPI App</div>
+              <p class="qr-subtitle">Complete your payment using the QR code below, then enter your upline name in the next field.</p>
+              
+              <div class="qr-image-frame">
+                <!-- Replace 'rahul qr.jpeg' with your exact filename in the same folder -->
+                <img
+                  src="rahul qr.jpeg"
+                  alt="Payment QR Code - Rahul Gurjar (6350385888@ptsbi)"
+                  onerror="this.style.display='none'; document.getElementById('qrFallback').style.display='block';"
+                />
+                <div id="qrFallback" class="qr-placeholder-fallback">
+                  <strong>QR Image Placeholder</strong><br />
+                  Place <code>rahul qr.jpeg</code> in the same folder as <code>index.html</code> to display the QR code.
+                </div>
+              </div>
+
+              <div class="upi-badge">UPI ID: 6350385888@ptsbi (Rahul Gurjar)</div>
+            </div>
+          </div>
+
+          <!-- 10. Upline Name -->
+          <div class="form-group">
+            <label class="form-label" for="uplineName">
+              10. Upline Name
+            </label>
+            <input
+              type="text"
+              id="uplineName"
+              name="uplineName"
+              class="form-control"
+              placeholder="Enter your upline name"
+              autocomplete="off"
+            />
+            <p class="verification-note">
+              Enter the name of the person who referred or guided you (if applicable).
+            </p>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn-primary submit-btn">
+            SUBMIT REGISTRATION
+          </button>
+
+          <div id="formStatus" class="status-message" role="alert"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Money-Making Masterclass</strong> — Educational Online Session</p>
+      <p>Disclaimer: This masterclass is designed for educational and informational purposes regarding digital skills and online opportunities. It does not guarantee specific income or financial results.</p>
+    </div>
+  </footer>
+
+  <!-- Client-Side JavaScript & Google Sheets Submission -->
+  <script>
+    /**
+     * IMPORTANT:
+     * Paste your deployed Google Apps Script Web App URL inside the quotes below
+     * AFTER you complete the Google Sheets & Apps Script setup steps.
+     */
+    const GOOGLE_SCRIPT_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzYLsW0ionKD302EJ4q6rny5U8NgH-QwJQhDqC6WCf-FimZTXOfmIr5QILe09kD9tp9_A/exec";
+
+    const form = document.getElementById("masterclassForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const statusBox = document.getElementById("formStatus");
+
+    function showMessage(message, type) {
+      statusBox.textContent = message;
+      statusBox.className = "status-message " + type;
+    }
+
+    function validateFormData(data) {
+      if (!data.fullName || data.fullName.length < 2) {
+        return "Please enter your full name.";
+      }
+
+      const cleanPhone = data.mobileNumber.replace(/\D/g, "");
+      if (cleanPhone.length < 10 || cleanPhone.length > 15) {
+        return "Please enter a valid mobile number (at least 10 digits).";
+      }
+
+      const numericAge = Number(data.age);
+      if (!data.age || isNaN(numericAge) || numericAge < 12 || numericAge > 100) {
+        return "Please enter a valid age between 12 and 100.";
+      }
+
+      if (!data.stateAndCity || data.stateAndCity.length < 3) {
+        return "Please enter both your State and City.";
+      }
+
+      if (!data.currentProfession) {
+        return "Please select your Current Profession.";
+      }
+
+      if (!data.earningReason) {
+        return "Please select why you want to start online earning.";
+      }
+
+      if (!data.gender) {
+        return "Please select your Gender.";
+      }
+
+      const cleanAmount = data.paymentAmount.replace(/[₹,\s]/g, "");
+      if (!cleanAmount || isNaN(Number(cleanAmount)) || Number(cleanAmount) <= 0) {
+        return "Please enter a valid payment amount in Rupees.";
+      }
+
+      return null;
+    }
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      statusBox.className = "status-message";
+      statusBox.textContent = "";
+
+      const formData = new FormData(form);
+      const payload = {
+        fullName: (formData.get("fullName") || "").trim(),
+        mobileNumber: (formData.get("mobileNumber") || "").trim(),
+        age: (formData.get("age") || "").trim(),
+        stateAndCity: (formData.get("stateAndCity") || "").trim(),
+        currentProfession: formData.get("currentProfession") || "",
+        earningReason: formData.get("earningReason") || "",
+        gender: formData.get("gender") || "",
+        paymentAmount: (formData.get("paymentAmount") || "").trim(),
+        uplineName: (formData.get("uplineName") || "").trim()
+      };
+
+      // Validate all mandatory fields
+      const validationError = validateFormData(payload);
+      if (validationError) {
+        showMessage(validationError, "error");
+        return;
+      }
+
+      // Check that the backend URL has actually been configured
+      if (
+        !GOOGLE_SCRIPT_WEB_APP_URL ||
+        GOOGLE_SCRIPT_WEB_APP_URL === "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE"
+      ) {
+        showMessage(
+          "Setup Incomplete: The Google Apps Script Web App URL has not been configured yet. Please paste your deployed Web App URL into GOOGLE_SCRIPT_WEB_APP_URL in index.html.",
+          "error"
+        );
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "SUBMITTING...";
+
+      try {
+        const bodyParams = new URLSearchParams();
+        Object.keys(payload).forEach((key) => {
+          bodyParams.append(key, payload[key]);
+        });
+
+        const response = await fetch(GOOGLE_SCRIPT_WEB_APP_URL, {
+          method: "POST",
+          body: bodyParams
+        });
+
+        const result = await response.json();
+
+        if (result && result.status === "success") {
+          showMessage(
+            "Thank you! Your registration request has been submitted. Our team will review your registration and share further details with you on WhatsApp.",
+            "success"
+          );
+          form.reset();
+        } else {
+          throw new Error(result.message || "Submission failed on the server.");
+        }
+      } catch (err) {
+        showMessage(
+          "Unable to submit the form right now. Please verify your internet connection or contact support if the problem persists.",
+          "error"
+        );
+        console.error("Submission Error:", err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "SUBMIT REGISTRATION";
+      }
+    });
+  </script>
+</body>
+</html>
